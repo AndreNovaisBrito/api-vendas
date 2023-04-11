@@ -52,3 +52,4 @@ Após essa instalação execute a aplicação com o comando `yarn dev` ou `npm r
 [Servidor no Discord](https://discord.gg/3J87BMz5fD)
 
 [LinkedIn](https://www.linkedin.com/in/jorgealuizio/)
+# api-vendas
