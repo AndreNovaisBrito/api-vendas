@@ -8,16 +8,11 @@
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "formattingToggle.affects": [
-    "formatOnSave"
-  ],
+  "formattingToggle.affects": ["formatOnSave"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.folders.associations": {
     "infra": "app",
