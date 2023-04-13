@@ -1,15 +1,14 @@
 import AppError from '@shared/errors/AppError';
+import path from 'path';
+import fs from 'fs';
 import { getCustomRepository } from 'typeorm';
 import User from '../typeorm/entities/User';
 import UsersRepository from '../typeorm/repositories/UsersRepository';
-import path from 'path';
 import uploadConfig from '@config/upload';
-import fs from 'fs';
 
 interface IRequest {
   user_id: string;
   avatarFilename: string;
-  password: string;
 }
 
 class UpdateUserAvatarService {
@@ -25,6 +24,7 @@ class UpdateUserAvatarService {
     if (user.avatar) {
       const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
       const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);
+
       if (userAvatarFileExists) {
         await fs.promises.unlink(userAvatarFilePath);
       }
