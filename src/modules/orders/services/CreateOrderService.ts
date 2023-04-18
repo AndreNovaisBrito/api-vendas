@@ -33,7 +33,7 @@ class CreateOrderService {
     const existsProductsIds = existsProducts.map(product => product.id);
 
     const checkInexistentProducts = products.filter(
-      products => !existsProductsIds.includes(product.id),
+      product => !existsProductsIds.includes(product.id),
     );
 
     if (checkInexistentProducts.length) {
