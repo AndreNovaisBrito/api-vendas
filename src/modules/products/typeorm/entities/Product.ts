@@ -11,6 +11,9 @@ class Product {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @OneToMany(() => OrdersProducts, order_products => order_products.order)
+  order_products: OrdersProducts[];
+
   @Column()
   name: string;
 
